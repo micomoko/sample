@@ -1,0 +1,282 @@
+$break-mobile-small:  240px;
+$break-mobile-large:  320px;
+$break-tablet-small:  480px;
+$break-tablet-large:  768px;
+$break-screen-small:  1024px;
+$break-screen-large:  1280px;
+
+.pageInner-wrapper{
+	.banner-image{
+
+		position: relative;
+
+		.banner-image__mobile-image{
+
+			display: block;
+			width: 100%;
+			height: auto;
+
+			@media (min-width: $break-tablet-large) {
+				display: none;
+			}
+
+		}
+
+		.banner-image__web-image{
+
+			display: none;
+			width: 100%;
+			height: auto;
+
+			@media (min-width: $break-tablet-large) {
+				height: 600px;
+				display: block;
+			}
+
+		}
+
+		.overlay{
+
+			bottom: 0px;
+		    position: absolute;
+		    padding: 0 1rem;
+		    z-index: 1;
+		    color: #fff;
+		    width: 100%;
+		    letter-spacing: 1px;
+		    text-shadow: 2px 2px 5px black;
+
+		    @media (min-width: $break-tablet-large) {
+				padding: 0 2rem;
+			}
+
+			@media (min-width: $break-screen-large) {
+				padding: 0 5rem;
+			}
+
+
+			.overlay__logo{
+				// display: none;
+				max-width: 200px;
+				padding-bottom: 10px;
+			}
+
+
+			.overlay__title{
+				font-weight: 600;
+				-webkit-animation-fill-mode: both;
+			    animation-fill-mode: both;
+			    -webkit-animation-name: fadeInSlider;
+			    animation-name: fadeInSlider;
+			    -webkit-animation-duration: 0.5s;
+			    animation-duration: 0.5s;
+			}
+
+			.overlay_location-label{
+				font-weight: 600;
+			}
+
+			.overlay_location{
+				font-weight: 600;
+			}
+
+			.type-loc{
+				// font-weightsize: 1rem;
+				font-weight: 600;
+				-webkit-animation-fill-mode: both;
+			    animation-fill-mode: both;
+			    -webkit-animation-name: fadeInSlider;
+			    animation-name: fadeInSlider;
+			    -webkit-animation-duration: 0.5s;
+			    animation-duration: 0.5s;
+			}
+
+		}
+	}
+
+
+
+	.details{
+
+		padding: 20px 1rem;
+
+		h4{
+			font-weight: 600;
+			text-transform: uppercase;
+		}
+
+		@media (min-width: $break-tablet-large) {
+			padding: 20px 2rem;
+		}
+
+		@media (min-width: $break-screen-large) {
+			padding: 20px 5rem;
+		}
+
+
+		.details__location,
+		.details__description,
+		.details__land-area,
+		.details__unit-range,
+		.details__price-range
+		.details__amenities,
+		.details__gallery,
+		.details__unitplans,
+		.details__floorplans,
+		.details__constructionUpdates,
+		.details__facade,
+		.details__map{
+			// margin-bottom: 30px;
+			padding: 20px 0;
+		}
+
+		.details__location {
+			&--map-frame{
+				border: 0;
+			    width: 290px;
+			    height: 290px;
+			    // margin: 0 auto;
+			    display: block;
+
+			    @media only screen and (min-width: $break-tablet-small){
+				    width: 300px;
+			    	height: 300px;
+				}
+
+				@media only screen and (min-width: $break-tablet-large){
+					float: right;
+				}
+
+				@media only screen and (min-width: $break-screen-large){
+				    width: 400px;
+			    	height: 400px;
+				}
+
+			}
+		}
+
+
+		.details__unit-range{
+			.details__unit-range--ranges{
+				margin: 0;
+			}
+		}
+
+		.details__price-range{
+			.details__price-range--request{
+				color: #007bff;
+				cursor: pointer;
+				font-weight: 600;
+			}
+		}
+
+		.details__gallery{
+			text-align: center;
+
+			.details__gallery--items{
+				    display: inline-block;
+				    width: 100%;
+				    padding-bottom: 10px;
+			}
+		}
+
+		.details__facade{
+			text-align: center;
+		}
+
+
+		.details__amenities{
+			.accordion{
+				margin: 20px 0;
+			}
+		}
+
+		.details__constructionUpdates {
+			text-align: center;
+			.details__constructionUpdates--images{
+				max-width: 300px;
+				display: inline-block;
+				margin: 0 auto;
+				cursor: zoom-in;
+
+				@media (min-width: $break-tablet-large) {
+					max-width: 400px;
+				}
+
+				@media (min-width: $break-screen-large) {
+					max-width: 500px;
+				}
+			}
+		}
+
+		.details__unitplans{
+			text-align: center;
+		}
+	}
+}
+
+
+#imageModal{
+	/* The Modal (background) */
+
+	z-index: 99999;
+
+	.modal {
+	    display: none; /* Hidden by default */
+	    position: fixed; /* Stay in place */
+	    z-index: 1; /* Sit on top */
+	    padding-top: 100px; /* Location of the box */
+	    left: 0;
+	    top: 0;
+	    width: 100%; /* Full width */
+	    height: 100%; /* Full height */
+	    overflow: auto; /* Enable scroll if needed */
+	    background-color: rgb(0,0,0); /* Fallback color */
+	    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+	}
+
+	/* Modal Content (Image) */
+	.modal-content {
+		
+	    margin: auto;
+	    margin-top: 80px;
+	    display: block;
+	    width: 80%;
+	    max-width: 900px;
+	    cursor: zoom-out;
+
+	    /* 100% Image Width on Smaller Screens */
+		@media only screen and (min-width: $break-screen-large){
+		    width: 100%;
+		}
+	}
+
+	/* Add Animation - Zoom in the Modal */
+	.modal-content, #caption { 
+	    animation-name: zoom;
+	    animation-duration: 0.6s;
+	}
+
+	@keyframes zoom {
+	    from {transform:scale(0)} 
+	    to {transform:scale(1)}
+	}
+
+	/* The Close Button */
+	.close {
+	    position: absolute;
+	    top: 15px;
+	    right: 35px;
+	    color: #f1f1f1;
+	    font-size: 40px;
+	    font-weight: bold;
+	    transition: 0.3s;
+	}
+
+	.close:hover,
+	.close:focus {
+	    color: #bbb;
+	    text-decoration: none;
+	    cursor: pointer;
+	}
+}

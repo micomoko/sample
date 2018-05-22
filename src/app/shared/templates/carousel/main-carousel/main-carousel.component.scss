@@ -1,0 +1,316 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Quicksand', sans-serif;;
+}
+
+:focus {
+    outline: none;
+}
+
+.slick-slide {
+    cursor: pointer;
+}
+
+/******************* [START] MAIN CAROUSEL CSS *******************/
+
+@-webkit-keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInSlider {
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+}
+
+@-webkit-keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0);
+        -ms-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInUpSlider {
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+}
+
+.main-slider-new .slick-active img.logo, 
+.main-slider-new .slick-active .item-button {
+    visibility: visible;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+.main-slider-new .slick-active .title,
+.main-slider-new .slick-active .type-loc,
+.main-slider-new .slick-active .item-description {
+    visibility: visible;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+}
+
+.main-slider-new .slick-active .title {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.main-slider-new .slick-active .type-loc {
+    -webkit-animation-delay: 0.7s;
+    animation-delay: 0.7s;
+}
+
+.main-slider-new .slick-active .item-description,
+.main-slider-new .slick-active .logo {
+    -webkit-animation-delay: 0.9s;
+    animation-delay: 0.9s;
+}
+
+.main-slider-new .slick-slide img.main-image{
+	width: 100%;
+	height: 300px;
+	margin: 0 auto;
+}
+
+.main-slider-new .slick-slide img.logo, 
+.main-slider-new .overlay .item-description,
+.main-slider-new .slick-slide img.main-image.web-image  {
+	display: none;
+}
+
+.main-slider-new .slick-prev,
+.main-slider-new .slick-next,
+.inner-slider-new .slick-prev,
+.inner-slider-new .slick-next {
+    display: none!important;
+}
+
+.slick-next {
+    right: 0;
+    z-index: 9;
+}
+
+.slick-prev {
+    left: 0;
+    z-index: 9;
+}
+
+.main-slider-new .overlay {
+    bottom: 10px;
+    position: absolute;
+    z-index: 1;
+    padding: 1rem;
+    color: #fff;
+    width: 100%;
+}
+
+.main-slider-new .overlay h1 {
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-shadow: 2px 2px 5px black;
+}
+
+.main-slider-new .overlay p.type-loc {
+	font-weight: 600;
+    letter-spacing: .5px;
+    text-shadow: 2px 2px 5px black;
+}
+
+.main-slider-new ul.slick-dots {
+	bottom: 0px;
+}
+
+.main-slider-new ul.slick-dots li button:before {
+    font-size: 12px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #f1f3f5;
+}
+
+.main-slider-new ul.slick-dots li.slick-active button:before {
+	font-size: 15px;
+	opacity: 1;
+    color: #057fec;
+}
+
+/******************* [END] MAIN CAROUSEL CSS *******************/
+
+
+/******************* [START] INNER CAROUSEL CSS *******************/
+
+.inner-slider-new ul.slick-dots {
+    bottom: 0px;
+}
+
+.inner-slider-new ul.slick-dots li button:before {
+    font-size: 12px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #f1f3f5;
+}
+
+.inner-slider-new ul.slick-dots li.slick-active button:before {
+    font-size: 15px;
+    opacity: 1;
+    color: #057fec;
+}
+
+.inner-slider-new .slick-slide img.main-image{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/******************* [END] INNER CAROUSEL CSS *******************/
+
+
+/* Tab / iPad VIEW */
+@media (min-width: 768px) {
+
+    nav.navbar {
+        padding-left: 2rem;
+    }
+
+
+    /******************* [START] MAIN CAROUSEL CSS *******************/
+
+    .main-slider-new .slick-slide img.main-image.mobile-image {
+        display: none;
+    }
+
+    .main-slider-new .slick-slide img.main-image.web-image {
+        display: inline-block;;
+        width: 100%;
+        height: auto;
+        height: 400px;
+        margin: 0 auto;
+    }
+
+    .main-slider-new .slick-slide img.logo {
+        display: block;
+        max-width: 15rem;
+        padding-bottom: 10px;
+    }
+
+
+    .main-slider-new .overlay {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    /******************* [END] MAIN CAROUSEL CSS *******************/
+}
+
+
+/* Desktop VIEW */
+@media (min-width: 1280px) {
+
+    nav.navbar,
+    .main-slider-new .overlay {
+        padding-left: 5rem; 
+    }
+
+
+    /******************* [START] MAIN CAROUSEL CSS *******************/
+
+    .main-slider-new .slick-slide img.main-image.web-image {
+        display: inline-block;;
+        width: 100%;
+        height: auto;
+        height: 600px;
+        margin: 0 auto;
+    }
+
+        .main-slider-new .overlay .item-description {
+            display: block;
+            padding-bottom: 20px;
+            text-shadow: 2px 2px 5px black;
+            font-weight: 600;
+        }
+
+        
+
+
+        .main-slider-new:hover .slick-prev,
+        .main-slider-new:hover .slick-next {
+            display: inline-block!important;
+            top: 35%;
+            opacity: .5;
+        }
+
+        .main-slider-new .slick-prev:hover,
+        .main-slider-new .slick-next:hover {
+            opacity: 1;
+        }
+
+        .slick-prev:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '<';
+          font-family: monospace;
+          opacity: 1;
+        }
+
+        .slick-next:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '>';
+          font-family: monospace;
+          opacity: 1;
+        }
+
+        .main-slider-new .slick-next{
+          right: 60px;
+        }
+
+    /******************* [END] MAIN CAROUSEL CSS *******************/
+}
+
+

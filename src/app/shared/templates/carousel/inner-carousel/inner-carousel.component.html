@@ -1,0 +1,17 @@
+<div id="inner-slider-wrapper">
+  <div class="inner-slider-new">
+    <div *ngFor="let image of item.images" (click)="redirectToInner(item)">
+    	<img class="main-image mobile-image" [src]="image.imageMobile" [alt]="item.projectName">
+      <!-- <img class="main-image web-image" [src]="item.imageLarge" alt="item.title"> -->
+    	<!-- <div class="gradient-overlay"  [ngStyle]="{ 'background-image': 'url(&#34;'+ gradientOverlay +'&#34;)'}"></div> -->
+    </div>
+    <div class="overlay">
+        <img class="logo" *ngIf="item.logo" itemprop="logo" [src]="item.logo" [alt]="item.projectName">
+        <!-- <h1 class="title">asdasdasdasdasdadsd</h1> -->
+        <!-- < --><!-- p class="type-loc">{{item.category}}<br>{{item.location}}</p>
+        <p class="item-description">{{item.description}}</p>
+        <button class="item-button  --><!-- btn btn-primary" type="button" (click)="redirectToInner(item)">SEE MORE!</button> -->
+  </div>
+  </div>
+  
+</div>

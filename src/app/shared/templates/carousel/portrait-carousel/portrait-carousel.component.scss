@@ -1,0 +1,294 @@
+a/* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Quicksand', sans-serif;;
+}
+
+:focus {
+    outline: none;
+}
+
+.slick-slide {
+    cursor: pointer;
+}
+
+/******************* [START] MAIN CAROUSEL CSS *******************/
+
+@-webkit-keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInSlider {
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+}
+
+@-webkit-keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0);
+        -ms-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInUpSlider {
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+}
+
+.inner-slider-new .slick-prev,
+.inner-slider-new .slick-next {
+    display: none!important;
+}
+
+.slick-next {
+    right: 0;
+    z-index: 9;
+}
+
+.slick-prev {
+    left: 0;
+    z-index: 9;
+}
+
+/******************* [END] MAIN CAROUSEL CSS *******************/
+
+
+/******************* [START] PORTRAIT CAROUSEL CSS *******************/
+
+.portrait-slider-new .slick-slide img,
+.portrait-slider-new .slick-slide .overlay {
+	width: 200px;
+	height: auto;
+}
+
+#portrait-slider-wrapper{
+    padding-left: 1rem;
+}
+
+#portrait-slider-wrapper h1.header {
+	font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+}
+
+
+#portrait-slider-wrapper .header .header-see-all {
+    position: absolute;
+    right: 10px;
+    color: #007bff;
+    padding: 0;
+    font-weight: 600;
+}
+
+.portrait-slider-new .slick-slide {
+	padding-right: 20px;
+}
+
+.portrait-slider-new .overlay h1.title {
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-size: 1.2rem;
+}
+
+.portrait-slider-new .overlay p.type-loc{
+    font-size: 1rem;
+}
+
+.portrait-slider-new .slick-prev,
+.portrait-slider-new .slick-next {
+	display: none!important;
+}
+
+/******************* [END] PORTRAIT CAROUSEL CSS *******************/
+
+
+/******************* [START] INNER CAROUSEL CSS *******************/
+
+.inner-slider-new ul.slick-dots {
+    bottom: 0px;
+}
+
+.inner-slider-new ul.slick-dots li button:before {
+    font-size: 12px;
+    content: '•';
+    text-align: center;
+    opacity: 1;
+    color: #f1f3f5;
+}
+
+.inner-slider-new ul.slick-dots li.slick-active button:before {
+    font-size: 15px;
+    opacity: 1;
+    color: #057fec;
+}
+
+.inner-slider-new .slick-slide img.main-image{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+/******************* [END] INNER CAROUSEL CSS *******************/
+
+
+/* Tab / iPad VIEW */
+@media (min-width: 768px) {
+
+    nav.navbar {
+        padding-left: 2rem;
+    }
+
+
+    /******************* [START] MAIN CAROUSEL CSS *******************/
+
+
+
+    /******************* [END] MAIN CAROUSEL CSS *******************/
+
+
+    /******************* [START] PORTRAIT CAROUSEL CSS *******************/
+
+    #portrait-slider-wrapper {
+        padding-left: 2rem;
+    }
+
+    #portrait-slider-wrapper .header .header-see-all {
+        right: 20px;
+        font-weight: 600;
+    }
+
+    .portrait-slider-new .slick-slide img,
+    .portrait-slider-new .slick-slide .overlay {
+        width: 250px;
+        height: auto;
+    }
+
+    /******************* [END] PORTRAI CAROUSEL CSS *******************/
+}
+
+
+/* Desktop VIEW */
+@media (min-width: 1280px) {
+
+    nav.navbar {
+        padding-left: 5rem; 
+    }
+
+
+    /******************* [START] MAIN CAROUSEL CSS *******************/
+
+        
+
+        .slick-prev:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '<';
+          font-family: monospace;
+          opacity: 1;
+        }
+
+        .slick-next:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '>';
+          font-family: monospace;
+          opacity: 1;
+        }
+
+
+
+    /******************* [END] MAIN CAROUSEL CSS *******************/
+
+
+    /******************* [START] PORTRAIT CAROUSEL CSS *******************/
+
+    #portrait-slider-wrapper {
+        padding: 2rem 5rem;
+    }
+
+    #portrait-slider-wrapper .header .header-see-all {
+        right: 5rem;
+        font-weight: 600;
+    }
+
+    #portrait-slider-wrapper h1.header {
+        font-size: 1.5rem;
+    }
+
+    .portrait-slider-new .slick-slide img,
+    .portrait-slider-new .slick-slide .overlay {
+        width: 300px;
+        height: auto;
+    }
+
+    .portrait-slider-new:hover .slick-prev, 
+    .portrait-slider-new:hover .slick-next {
+        display: inline-block!important;
+        opacity: .5;
+    }
+
+    .portrait-slider-new .slick-prev:hover,
+    .portrait-slider-new .slick-next:hover {
+        opacity: 1;
+    }
+
+    .portrait-slider-new .slick-prev, 
+    .portrait-slider-new .slick-next{
+        top: 25%
+    }
+
+    .portrait-slider-new .slick-prev:before , 
+    .portrait-slider-new .slick-next:before {
+        font-size: 110px;
+    }
+    
+    .portrait-slider-new .slick-next {
+        right: 5px;
+    }
+
+    .portrait-slider-new .slick-prev {
+        left: -35px;
+    }
+
+
+    /******************* [END] PORTRAI CAROUSEL CSS *******************/
+
+}
+
+

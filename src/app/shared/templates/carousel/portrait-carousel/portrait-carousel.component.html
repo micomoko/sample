@@ -1,0 +1,16 @@
+<div id="portrait-slider-wrapper">
+  <div class="header">
+    <h1 class="header">{{headerLabel}}</h1>
+    <!-- <button class="header-see-all btn btn-link" type="button" (click)="redirectToInner(item)">SEE MORE!</button> -->
+  </div>
+  <div class="portrait-slider-new">
+    <div *ngFor="let item of items" (click)="redirectToInner(item)">
+    	<img class="main-image" [src]="item.image" alt="item.title">
+    	<!-- <div class="gradient-overlay"  [ngStyle]="{ 'background-image': 'url(&#34;'+ gradientOverlay +'&#34;)'}"></div> -->
+    	<div class="overlay">
+    		<h1 class="title">{{item.title | truncate: 25}}</h1>
+    		<p class="type-loc">{{item.category}}<br>{{item.location}}</p>
+    	</div>
+    </div>
+  </div>
+</div>

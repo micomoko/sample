@@ -1,0 +1,149 @@
+$break-mobile-small:  240px;
+$break-mobile-large:  320px;
+$break-tablet-small:  480px;
+$break-tablet-large:  768px;
+$break-screen-small:  1024px;
+$break-screen-large:  1280px;
+
+.slick-slide {
+    cursor: pointer;
+}
+
+/******************* [START] MAIN CAROUSEL CSS *******************/
+
+@-webkit-keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInSlider {
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+}
+
+@-webkit-keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0);
+        -ms-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInUpSlider {
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+}
+
+
+
+
+
+
+.slider-for{
+
+    
+
+    margin-top: 20px;
+
+    .slider-for__image{
+        .slider-for__image--item{
+            width: auto;
+            height: 200px;
+            margin: 0 auto;
+
+            @media (min-width: $break-tablet-large) {
+                height: 400px;
+            }
+
+            @media (min-width: $break-screen-large) {
+                height: 550px;
+            }
+        }
+    }
+}
+
+
+
+
+.sync-slider-new{
+
+    .slick-track{
+        margin: auto 0;
+    }
+
+    .slick-prev, .slick-next {
+
+        @media (min-width: $break-screen-large) {
+            display: none!important;
+            top: 5%;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+    
+    }
+
+    &:hover .slick-prev, &:hover .slick-next{
+
+        @media (min-width: $break-screen-large) {
+            display: inline-block!important;
+            opacity: .5;
+        }
+    }
+
+    .slick-next {
+        @media (min-width: $break-screen-large) {
+            right: 60px;
+        }
+    }
+
+    .sync-slider-new__image{
+        .sync-slider-new__image--item{
+            width: 100%;
+            height: 30px;
+            padding: 5px;
+
+            @media (min-width: $break-tablet-large) {
+                height: 100px;
+            }
+
+            @media (min-width: $break-screen-large) {
+                height: 150px;
+            }
+        }
+    }
+}

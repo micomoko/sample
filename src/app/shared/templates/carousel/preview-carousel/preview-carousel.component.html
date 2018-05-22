@@ -1,0 +1,11 @@
+<div id="preview-slider-wrapper">
+  <div class="header" *ngIf="headerLabel">
+    <h1 class="header">{{headerLabel}}</h1>
+  </div>
+  <div class="preview-slider-new">
+    <div *ngFor="let item of items">
+    	<img class="main-image" [src]="item" (click)="showImageModal(item)" [alt]="projectName">
+    </div>
+  </div>
+</div>
+<preview-modal [image]="imageToShowModal" [projectName]="projectName" [name]="name"></preview-modal>

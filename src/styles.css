@@ -1,0 +1,117 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Quicksand', sans-serif;
+    /*max-width: 1280px;
+    margin: 0 auto;*/
+}
+
+:focus {
+    outline: none;
+}
+
+.slick-slide {
+    cursor: pointer;
+}
+
+/******************* [START] MAIN CAROUSEL CSS *******************/
+
+@-webkit-keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInSlider {
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+}
+
+@-webkit-keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0);
+        -ms-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInUpSlider {
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+}
+
+
+.slick-prev, .slick-next{
+    opacity: .5;
+}
+
+.slick-prev:hover, .slick-next:hover{
+    opacity: 1;
+}
+
+.slick-next {
+    right: 0;
+}
+
+.slick-prev {
+    left: 0;
+    z-index: 9;
+}
+
+/* Tab / iPad VIEW */
+@media (min-width: 768px) {
+
+}
+
+
+/* Desktop VIEW */
+@media (min-width: 1280px) {
+        .slick-prev:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '<';
+          font-family: monospace;
+          opacity: 1;
+        }
+
+        .slick-next:before {
+          color: #006d99;
+          font-size: 150px;
+          content: '>';
+          font-family: monospace;
+          opacity: 1;
+        }
+}
+
+

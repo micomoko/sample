@@ -1,0 +1,14 @@
+<div class="main-slider-new">
+  <div *ngFor="let item of items | slice:0:21;" (click)="redirectToInner(item)">
+  	<img class="main-image mobile-image" [src]="item.imageMobile" alt="item.projectName">
+    <img class="main-image web-image" [src]="item.imageLarge" alt="item.projectName">
+  	<!-- <div class="gradient-overlay"  [ngStyle]="{ 'background-image': 'url(&#34;'+ gradientOverlay +'&#34;)'}"></div> -->
+  	<div class="overlay">
+      <img class="logo" *ngIf="item.logo" itemprop="logo" [src]="item.logo" alt="item.projectName" >
+  		<h1 class="title">{{item.projectName}}</h1>
+  		<p class="type-loc">{{item.category}}<br>{{item.location}}</p>
+      <div class="item-description" [innerHTML]=item.description></div>
+  		<button class="item-button btn btn-primary" type="button" (click)="redirectToInner(item)">SEE MORE!</button>
+  	</div>
+  </div>
+</div>

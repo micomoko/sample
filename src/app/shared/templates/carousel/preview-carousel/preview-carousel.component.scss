@@ -1,0 +1,124 @@
+$break-mobile-small:  240px;
+$break-mobile-large:  320px;
+$break-tablet-small:  480px;
+$break-tablet-large:  768px;
+$break-screen-small:  1024px;
+$break-screen-large:  1280px;
+
+.slick-slide {
+    cursor: pointer;
+}
+
+/******************* [START] MAIN CAROUSEL CSS *******************/
+
+@-webkit-keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInSlider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInSlider {
+    -webkit-animation-name: fadeInSlider;
+    animation-name: fadeInSlider;
+}
+
+@-webkit-keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50%, 0);
+        transform: translate3d(0, 50%, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none;
+    }
+}
+
+@keyframes fadeInUpSlider {
+    0% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 50px, 0);
+        -ms-transform: translate3d(0, 50px, 0);
+        transform: translate3d(0, 50px, 0);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+    }
+}
+
+.slick-slide.slick-active .animation.fadeInUpSlider {
+    -webkit-animation-name: fadeInUpSlider;
+    animation-name: fadeInUpSlider;
+}
+
+
+
+#preview-slider-wrapper{
+
+    paddin-top: 20px;
+
+    // .preview-slider-new:hover .slick-next,
+    // .preview-slider-new:hover .slick-prev {
+        
+    // }
+
+    .preview-slider-new {
+
+        &:hover .slick-next,
+        &:hover .slick-prev {
+            @media (min-width: $break-screen-large) {
+
+                display: inline-block!important;
+                opacity: .5;
+            }
+        }
+
+        .slick-prev, 
+        .slick-next{
+            top: 15%;
+            display: none!important;
+
+            @media (min-width: $break-screen-large) {
+
+                &:hover{
+                    display: inline-block!important;
+                    opacity: 1;
+                }
+                
+            }
+        }      
+
+         .slick-next{
+            right: 60px;
+         }
+
+        .main-image {
+            width: auto;
+            height: 100px;
+            margin: 0 auto;
+            padding: 10px;
+            cursor: zoom-in;
+
+            @media (min-width: $break-tablet-large) {
+                height: 200px;
+            }
+        }
+    }
+
+}
