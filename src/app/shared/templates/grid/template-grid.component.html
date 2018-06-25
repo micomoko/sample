@@ -1,8 +1,35 @@
-<div class="template-grid-wrapper">
-  <div class="template-mobile">
-    <div class="template-mobile__item" *ngFor="let item of items">
-      <img [src]="item.image">
-      <span>{{item.title}}</span>
+<div class="container grid-container">
+
+  <div class="form-group grid-container__select-mobile">
+    <select id="select-location" [(ngModel)]="selectedCatID" class="form-control selectoption ggrid-container__select-mobile--select" (change)="toggleTabContent()">
+	    <option *ngFor="let cat of categories" [ngValue]="cat.categoryID">{{cat.categoryName}}({{getPropertyCount(cat.categoryID)}})</option>
+  	</select>
+  </div>
+
+  <div class="nav-wrapper grid-container__select-desktop" *ngIf="categories.length > 0">
+  	<ul class="nav nav-tabs nav-wrapper__nav">
+  		<li class="nav-wrapper__nav--item" [class.active]="selectedCatID === cat.categoryID" *ngFor="let cat of categories" (click)="setSelectedCatID(cat.categoryID)">{{cat.categoryName}}({{getPropertyCount(cat.categoryID)}})</li>
+  	</ul>
+  </div>
+
+  <div class="grid-container__tab-content">
+    
+    <div id="categories{{catIndex}}" class="tab-pane fade in active show" *ngFor="let cat of categories; let catIndex = index">
+    	<div *ngFor="let item of properties | slice:0:sliceCount;" class="item-wrapper" (click)="redirectToInner(item)">
+    		<img [src]="item.imageMobile" [alt]="item.projectName" class="item-wrapper--image-mobile">
+    		<span class="item-wrapper--image-desc">{{item.projectName}}</span>
+    		<hr class="item-wrapper--image-hr">
+    		<span class="item-wrapper--image-loc" *ngIf="!fromLanding">{{item.locationName}}</span>
+    	</div>
     </div>
+
+    <div class="grid-container__tab-content--no-content" *ngIf="!properties || properties.length < 1">
+    	<h3>None Available.</h3>
+    </div>
+
+    <div class="grid-container__tab-content--load-more" *ngIf="sliceCount < properties.length">
+    	<button class="btn btn-primary" (click)="updateSliceCount()">Load More!</button>
+    </div>
+
   </div>
 </div>

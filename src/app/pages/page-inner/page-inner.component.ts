@@ -25,6 +25,8 @@ export class PageInnerComponent implements OnInit{
 
 	private paramsSub: any;
 
+	displayVideo: boolean = true;
+
 	projectDetails: any;
 
 	amenitiesOptions = ["Amenities", "Outdoor Amenities", "Indoor Amenities", "Building Features", "Sustainable Features", "Unit Features and Provisions"];
@@ -37,6 +39,8 @@ export class PageInnerComponent implements OnInit{
 	floorPlan: any;
 	unitPlan: any;
 	constructionUpdates: any;
+	lotRange: any;
+	planType: any;
 
 
 	imageToShowModal = '';
@@ -59,13 +63,23 @@ export class PageInnerComponent implements OnInit{
 		 		return;
 		 	}
 
-		 	this.getProjectDetails(this.projectID);
-		 	this.getAmenities(this.projectID);
-		 	this.getGallery(this.projectID);
-		 	this.getFacade(this.projectID);
-		 	this.getUnitPlan(this.projectID);
-		 	this.getConstructionUpdates(this.projectID);
-		 	this.getMapURL();
+		 	this.getProjectDetails();
+
+		 	if(this.projectDetails){
+				this.getAmenities();
+				this.getMapURL();
+				this.getVideoURL();
+			 	this.getGallery();
+			 	this.getFacade();
+			 	this.getUnitPlan();
+			 	this.getLotRange();
+			 	this.getPlanType();
+			 	this.getConstructionUpdates();
+			 	
+		 	}else{
+		 		console.log("WHAT");
+		 	}
+		 	
 
 
 		 	
@@ -78,37 +92,51 @@ export class PageInnerComponent implements OnInit{
 		this.projectDetails.googleMap = this.sanitizer.bypassSecurityTrustResourceUrl(this.projectDetails.googleMap);
 	}
 
+	getVideoURL() {
+		if(!this.projectDetails.video) return;
 
-	private getProjectDetails(projectID: any){
-		this.projectDetails =  this.pageInnerService.getProjectDetails(projectID);
+		this.projectDetails.video = this.sanitizer.bypassSecurityTrustResourceUrl(this.projectDetails.video);
+	}
+
+
+	private getProjectDetails(){
+		this.projectDetails =  this.pageInnerService.getProjectDetails(this.projectID);
 	}
 
 
 
-	private getGallery(projectID: any){
-		this.gallery = this.pageInnerService.getGallery(projectID);
+	private getGallery(){
+		this.gallery = this.pageInnerService.getGallery(this.projectID);
 	}
 
-	private getAmenities(projectID: any){
-		// this.amenities = this.pageInnerService.getAmenities(projectID);
-		this.amenities =  this.pageInnerService.getAmenities(projectID);
+	private getAmenities(){
+		this.amenities =  this.pageInnerService.getAmenities(this.projectID);
 	}
 
-	private getFacade(projectID: any){
-		this.facade = this.pageInnerService.getFacade(projectID);
+	private getFacade(){
+		this.facade = this.pageInnerService.getFacade(this.projectID);
 	}
 
-	private getFloorPlan(projectID: any){
+	private getFloorPlan(){
 
 	}
 
-	private getUnitPlan(projectID: any){
-		this.unitPlan = this.pageInnerService.getUnitPlan(projectID);
+	private getUnitPlan(){
+		this.unitPlan = this.pageInnerService.getUnitPlan(this.projectID);
 	}
 
 
-	private getConstructionUpdates(projectID: any){
-		this.constructionUpdates = this.pageInnerService.getConstructionUpdates(projectID);
+	private getConstructionUpdates(){
+		this.constructionUpdates = this.pageInnerService.getConstructionUpdates(this.projectID);
+	}
+
+
+	private getLotRange(){
+		this.lotRange = this.pageInnerService.getLotRange(this.projectID);
+	}
+
+	private getPlanType(){
+		this.planType = this.pageInnerService.getPlanType(this.projectID);
 	}
 
 	showImageModal(src: string, name: string){
@@ -118,5 +146,9 @@ export class PageInnerComponent implements OnInit{
 
 	toggleModal(name: string){
 		$("#imageModal" + name).modal("toggle")
+	}
+
+	closeVideo(){
+		this.displayVideo = false;
 	}
 }

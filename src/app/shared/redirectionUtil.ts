@@ -9,6 +9,7 @@ export class RedirectionUtil{
 
 	navigateToHome(){
 		this.router.navigate(['']);
+		window.scrollTo(0, 0);
 	}
 
 	// LOCATION LANDING PAGE
@@ -16,6 +17,7 @@ export class RedirectionUtil{
 		if(!location || !location.locationID) return;
 		var locationName = this.constructTitle(location.locationName);
 		this.router.navigate(['', locationName, location.locationID]);
+		window.scrollTo(0, 0);
 	}
 
 	// redirectToDetails(projectName: string, projectID){
@@ -30,6 +32,7 @@ export class RedirectionUtil{
 		locationName = this.constructTitle(locationName);
 		projectName = this.constructTitle(projectName);
 		this.router.navigate(['', locationName, projectName, projectID]);
+		window.scrollTo(0, 0);
 	}
 
 

@@ -474,6 +474,122 @@ export class AmenitiesDomain {
     //*******************END ORTIGAS**************************//
 
 
+    //*******************START QUEZON CITY**************************//
+
+    {
+      projectID: 21,
+      amenities : [
+        {
+          header: 'Indoor Amenities',
+          data : [
+            "Lobby",
+            "Function Room"]
+        },
+        {
+          header: 'Outdoor Amenities',
+          data : [
+            "Lounge, Lap and Kiddie Pool",
+            "Swimming Deck",
+            "Outdoor Shower",
+            "Jogging Trail",
+            "Pavilion & Barbecue Area",
+            "Play Area",
+            "Open Lawn",
+            "Terraced Seating",
+            "Basketball Court"]
+        },
+      ],
+    },
+
+    {
+      projectID: 22,
+      amenities : [
+        {
+          header: 'Indoor Amenities',
+          data : [
+            "Board Room (Tower One, 2nd floor)",
+            "Indoor Fitness Gym (Tower One, 2nd floor)",
+            "Indoor Playroom (Tower Two, 2nd floor)",
+            "Function Room (Tower Two, 2nd floor)",
+            "Sky Lounge (Tower Two, Roofdeck)"]
+        },
+        {
+          header: 'Outdoor Amenities',
+          data : [
+            "Al Fresco Lounge (Tower One, 2nd floor)",
+            "Kiddie Pool and Lounge / Lap Pool (Tower One, 2nd floor)",
+            "Sky Park (Tower Two, Roofdeck)",
+            "Play Area (Tower Two, 2nd floor)"]
+        },
+        {
+          header: 'Retail',
+          data : [
+            "Al Fresco Dining",
+            "Cafés"]
+        },
+      ],
+    },
+
+
+    {
+      projectID: 23,
+      amenities : [
+        {
+          header: 'Indoor Amenities',
+          data : [
+            "Ground Floor Lobby and Drop-off",
+            "Function Room",
+            "Gym"]
+        },
+        {
+          header: 'Outdoor Amenities',
+          data : [
+            "Lap Pool",
+            "Lounge Pool",
+            "Kiddie Pool",
+            "Outdoor Lounge",
+            "Outdoor Play Area"]
+        },
+        {
+          header: 'Retail Courtyard',
+          data : [
+            "Retail Unit Floor: Ground Floor",
+            "Total Retail Units: 22",
+            "Gross Leasable Area: 1,738 sq.m. | ± 18,710 sq.ft.",
+            "Ownership: Ayala Land Inc."]
+        },
+        {
+          header: 'Building Features',
+          data : [
+            "Interior-designed lobbies and select common areas",
+            "Ground floor lobby with direct access to the Retail Courtyard",
+            "Amenity garden deck (approx. 1,800 sq.m. amenity deck at the 2nd floor) ",
+            "Mail room",
+            "Allocated emergency load for residential units in case of power outage",
+            "Heat and fire detection, alarm, and sprinkler system",
+            "Two (2) fire exits per residential floor",
+            "24-hour building security and building maintenance CCTV cameras",
+            "RFID for parking, amenities, and common areas",
+            "Garbage disposal system",
+            "Provision for building maintenance unit (gondola/davit system)"]
+        },
+        {
+          header: 'Sustainable Features',
+          data : [
+            "Dual-flush toilets",
+            "Low-flow valves",
+            "Naturally ventilated elevator lobbies and hallways",
+            "Maximized natural lighting"]
+        },
+      ],
+    },
+
+
+    //*******************END QUEZON CITY**************************//
+
+    //*******************START TAGAYTAY**************************//
+
+
     {
       projectID: 44,
       amenities : [
@@ -506,7 +622,155 @@ export class AmenitiesDomain {
             "Community Deck (roof deck)"]
         },
       ],
-    }
+    },
+
+    //*******************END TAGAYTAY**************************//
+
+
+    //*******************START LAGUNA**************************//
+
+
+    {
+      projectID: 51,
+      amenities : [
+        {
+          header: 'Amenities',
+          data : [
+            "Main Central Park Complex - Central Park",
+            "Main Central Park Complex - Clubhouse (approx. 700 sq.m.)",
+            "Function room (100 sq.m.) that can accommodate 70 pax",
+            "Board room / meeting room (20 sq.m.)",
+            "Outdoor lounge area",
+            "400 sq.m. Swimming Pool",
+            "Kiddie pool ",
+            "Lap Pool",
+            "Basketball Court"]
+        }
+      ]
+    },
+
+
+    {
+      projectID: 52,
+      amenities : [
+        {
+          header: 'Outdoor Amenities',
+          data : [
+            "Central Park Jogging and Biking Trails",
+            "Lap pool",
+            "Kiddie pool",
+            "Sunken garden",
+            "Pocket parks",
+            "Basketball court",
+            "Outdoor play area",
+            "Primary entrance with a guardhouse",
+            "Secondary entrance with a guardhouse"]
+        },
+        {
+          header: 'Indoor Amenities',
+          data : [
+            "Clubhouse",
+            "Function room",
+            "Board room",
+            "Gym",
+            "Kid's play area",
+            "Juice bar",
+            "Community store"]
+        }
+      ]
+    },
+
+
+    {
+      projectID: 54,
+      amenities : [
+        {
+          header: 'Outdoor Amenities',
+          data : [
+            "Primary entrance with a guardhouse",
+            "Secondary entrance with a guardhouse",
+            "Central Park",
+            "Lap pool",
+            "Kiddie pool Lounge Area",
+            "Pocket Parks",
+            "Jogging and Biking Trails"]
+        },
+        {
+          header: 'Indoor Amenities',
+          data : [
+            "Clubhouse (approx. 1,000 sq.m.)",
+            "Function room (200 sqm) that can accommodate 80 pax",
+            "oard room and meeting room (30 sqm)"]
+        }
+      ]
+    },
+
+
+    {
+      projectID: 56,
+      amenities : [
+        {
+          header: 'Aqua Zone',
+          data : [
+            "Free form pools",
+            "Lounge pool",
+            "Leisure and lapping pool",
+            "Kiddie pool",
+            "Toddler splash pool",
+            "Wet Playarea including Aquaclimb, water jets and fountains",
+            "Deck and patio",
+            "Green roof changing rooms"]
+        },
+        {
+          header: 'E-Zone',
+          data : [
+            "Library and Board Room",
+            "Game Room",
+            "Outdoor Theatre",
+            "Children's activity area",
+            "Teens' activity area",
+            "Wi-fi connectivity"]
+        },
+        {
+          header: 'Green Zone',
+          data : [
+            "Picnic & camping grove",
+            "Mountain bike & hiking trails",
+            "Botanical park",
+            "Detention pond with boardwalk & footbridge",
+            "Bonfire and BBQ pit area",
+            "Terraced garden",
+            "Organic farm",
+            "Greenhouse and plant nursery"]
+        },
+        {
+          header: 'Go Zone',
+          data : [
+            "Covered play courts (basketball, badminton, volley ball, table tennis)",
+            "Outdoor play field (foot ball, frisbee, ball kicking, dodge ball)",
+            "Jogging path"]
+        },
+        {
+          header: 'Me Zone',
+          data : [
+            "Meditation grove and viewing pavilion",
+            "Gym & outdoor exercise area",
+            "Rock garden"]
+        },
+        {
+          header: 'Eco-Friendly Elements',
+          data : [
+            "Water - double-piping system, bio-swales, water detention pond, recycled water irrigation system, permeable paving, low-flow fixtures and high-flow valves in the clubhouse, landscaping with endemic species",
+            "Power - natural ventilation, natural lighting, LED lights, solar-powered lights",
+            "Gas - tree-shaded walks and pedestrian lanes, bike lanes, bike racks, distributed park system, walkable and porous community",
+            "Waste - efficient waste-management system, recycling programs, composting areas"]
+        }
+      ]
+    },
+
+
+    //*******************END LAGUNA**************************//
+
   ];
 
 

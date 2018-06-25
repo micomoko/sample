@@ -66,9 +66,35 @@ export class UnitPlanDomain {
         "https://www.alveoland.com.ph/wp-content/uploads/2017/08/3BR-Twin-Flat.jpg",
         "https://www.alveoland.com.ph/wp-content/uploads/2017/08/3BR.jpg"
       ]
-    }
+    },
 
      //*******************END ORTIGAS**************************//
+
+     //*******************START QUEZON CITY**************************//
+
+     {
+      projectID: 22,
+      unitPlan: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/High-Park-Tower-Two-Studio-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/High-Park-Tower-Two-1BR-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/High-Park-Tower-Two-2BR-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/High-Park-Tower-Two-3BR-2.png",
+      ]
+    },
+
+
+
+    {
+      projectID: 23,
+      unitPlan: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2018/01/Orean-Place-Tower-One-Studio-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2018/01/Orean-Place-Tower-One-1BR-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2018/01/Orean-Place-Tower-One-2BR-2.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2018/01/Orean-Place-Tower-One-3BR-2.png"
+      ]
+    }
+
+     //*******************END QUEZON CITY**************************//
   ];
 
   /*

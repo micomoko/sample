@@ -1,11 +1,14 @@
 <section>
-  <main-carousel></main-carousel>
+  <main-carousel [locationID]="locationID" *ngIf="loadTemplate"></main-carousel>
 </section>
 
-<section>
+<!-- <section>
   <portrait-carousel [headerLabel]="forSale"></portrait-carousel>
 </section>
 
 <section>
   <portrait-carousel [headerLabel]="forRent"></portrait-carousel>
-</section>
+</section> -->
+
+
+<template-grid [locationID]="locationID" [fromLanding]=true *ngIf="loadTemplate"></template-grid>

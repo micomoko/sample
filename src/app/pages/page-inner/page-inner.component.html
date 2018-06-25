@@ -1,36 +1,31 @@
-<!-- <section>
-  <inner-carousel></inner-carousel>
-</section> -->
-
-<!-- <section>
-  <portrait-carousel [headerLabel]="forSale"></portrait-carousel>
-</section>
-
-<section>
-  <portrait-carousel [headerLabel]="forRent"></portrait-carousel>
-</section> -->
-
-
 <div class="pageInner-wrapper">
 	<div class="banner-image" *ngIf="projectDetails">
 		<img class="banner-image__mobile-image" [src]="projectDetails.imageMobile" alt="projectDetails.projectName">
 		<img class="banner-image__web-image" [src]="projectDetails.imageLarge" alt="projectDetails.projectName">
+
 		<div class="overlay">
 			<img class="overlay__logo" *ngIf="projectDetails.logo" itemprop="logo" [src]="projectDetails.logo" alt="projectDetails.projectName" >
 	  		<h1 class="overlay__title" *ngIf="!projectDetails.logo">{{projectDetails.projectName}}</h1>
-	  		<h4 class="type-loc">{{projectDetails.category}}</h4><br>
+	  		<h4 class="type-loc">{{projectDetails.category}}</h4>
 	  	<!-- 	<h4 class="overlay_location-label">LOCATION:</h4>
 	  		<p class="overlay_location">{{projectDetails.location}}</p> -->
 	  		<!-- <p class="type-loc">{{projectDetails.category}}<br />{{projectDetails.location}}</p> -->
 		</div>
+
+		
 	</div>
 	<div class="details" *ngIf="projectDetails">
+
+		<div class="details__video" *ngIf="projectDetails.video && displayVideo">
+			<span class="close" (click)="closeVideo()">&times;</span>
+			<iframe class="details__video--video-frame" [src]="projectDetails.video" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+		</div>
 
 		<div class="details__location" *ngIf="projectDetails.location">
 			<h4>LOCATION</h4>
 			<p>{{projectDetails.location}}</p>
-
 			<iframe class="details__location--map-frame" *ngIf="projectDetails.googleMap" [src]="projectDetails.googleMap"  frameborder="0" allowfullscreen></iframe>
+		</div>
 
 		<div class="details__description" *ngIf="projectDetails.description || projectDetails.longDescription">
 			<h4>DESCRIPTION</h4>
@@ -48,9 +43,23 @@
 			<p class="details__unit-range--ranges" *ngFor=" let unitRange of projectDetails.unitRange">{{unitRange}}</p>
 		</div>
 
+		<div class="details__lot-range" *ngIf="lotRange && lotRange.length > 0">
+			<h4>LOT RANGE</h4>
+			<p>(approx sizes only)</p>
+			<p class="details__lot-range--ranges" *ngFor=" let range of lotRange">{{range}}</p>
+		</div>
+
+
+		<div class="details__plan-type" *ngIf="planType && planType.length > 0">
+			<h4>PLAN TYPE</h4>
+			<p>(approx sizes only)</p>
+			<p class="details__plan-type--type" *ngFor=" let type of planType">{{type}}</p>
+		</div>
+
+
 		<div class="details__price-range">
 			<h4>PRICE RANGE</h4>
-			<p>Price is available upon <a class="details__price-range--request">request</a>.</p>
+			<p>Price is available upon <a class="details__price-range--request" href="mailto:youremail@address.com">request</a>.</p>
 		</div>
 
 		<div class="details__amenities" *ngIf="amenities && amenities.length > 0">
@@ -68,7 +77,7 @@
 			        {{amen.header | uppercase}}
 			      </a>
 			    </div>
-			    <div id="collapseOne{{i}}" class="collapse" [ngClass]="{ first: show }" data-parent=".accordion">
+			    <div id="collapseOne{{i}}" class="collapse" [class.show]="first" data-parent=".accordion">
 			      <div class="card-body">
 			        <ul>
 			        	<li *ngFor="let data of amen.data">{{data}}</li>

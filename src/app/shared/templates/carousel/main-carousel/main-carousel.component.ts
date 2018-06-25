@@ -1,5 +1,5 @@
 /* Angular Libs*/
-import { Component, OnInit, AfterViewInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewEncapsulation, Input, ChangeDetectorRef } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import { Router } from '@angular/router';
 import { RedirectionUtil } from 'app/shared/redirectionUtil';
@@ -19,17 +19,20 @@ declare var $: any;
 })
 export class MainCarouselComponent implements OnInit{
 
+
+  @Input() locationID: number;
+
 	items: any = [];
 
 	constructor(private redirectionUtil: RedirectionUtil, 
-    private carouselService: CarouselService, private navigationService: NavigationService){
+    private carouselService: CarouselService, private navigationService: NavigationService, private cdRef: ChangeDetectorRef){
 		
 	}
 
 	/** Initialize Settings for Slick Slider.*/
     ngOnInit() {
 
-      this.items = this.carouselService.heroCarousel;
+      this.items = this.carouselService.getHeroCarousel(this.locationID);;
 
       setTimeout(function(){
         $('.main-slider-new').not('.slick-initialized').slick({
@@ -42,6 +45,10 @@ export class MainCarouselComponent implements OnInit{
               speed: 700
             });
       }, 0);
+    }
+
+    ngAfterViewChecked(){
+      this.cdRef.detectChanges();
     }
 
 

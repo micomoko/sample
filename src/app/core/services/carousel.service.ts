@@ -8,11 +8,11 @@ export class CarouselService {
 	heroCarousel: any = [];
 
 	constructor(private projects: Projects){
-		this.getHeroCarousel();
+		// this.getHeroCarousel();
 	}
 
-	private getHeroCarousel(){
-		this.heroCarousel = this.projects.getHeroCarousel();
+	getHeroCarousel(locationID: number){
+		 return this.projects.getHeroCarousel(locationID);
 	}
 
 }

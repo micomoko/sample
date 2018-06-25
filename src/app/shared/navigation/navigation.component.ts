@@ -25,10 +25,10 @@ export class NavigationComponent implements OnInit{
     private prevScrollpos: any;
 
 	agent: any = {
-        name: 'Jayson Monis',
-        title: 'Property Investment Consultant',
+        name: 'Jayson B. Monis',
+        title: 'Sr. Property Investment Consultant',
         mobileNumber: '0900000000000',
-        email: 'sampleEmail@gmail.com',
+        email: 'jasonbmonis.investments@gmail.com',
         facebook: '',
         avatar: 'https://www.w3schools.com/howto/img_avatar.png'
     };

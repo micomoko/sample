@@ -1,0 +1,143 @@
+$break-mobile-small:  240px;
+$break-mobile-large:  320px;
+$break-tablet-small:  480px;
+$break-tablet-large:  768px;
+$break-screen-small:  1024px;
+$break-screen-large:  1280px;
+
+.grid-container{
+	// &__label{
+	// 	display: inline-block;
+	// 	font-weight: 600;
+	// }
+
+    padding-bottom: 30px;
+
+	&__select-mobile{
+
+		@media (min-width: $break-tablet-large) {
+			display: none;
+        }	
+
+		&--select{
+			display: inline-block;
+			width: 100%;
+		}
+
+	}
+
+
+	&__select-desktop{
+		display: none;
+
+		@media (min-width: $break-tablet-large) {
+			display: block;
+        }	
+	}
+
+	
+
+
+
+	&__tab-content{
+
+		width: 100%;
+		text-align: center;
+
+		.item-wrapper{
+			border: 1px solid;
+			border-color: #0e0e0e42;
+			margin-bottom: 10px;
+			padding: 10px;
+			cursor: pointer;
+
+			@media (min-width: $break-tablet-small) {
+				width: 45%;
+				display: inline-block;
+				margin: 2%;
+            }
+
+            @media (min-width: $break-screen-large) {
+				width: 25%;
+            }				    
+
+			&--image-mobile{
+				width: 90%;
+				height: 200px;
+				margin: 0 auto;
+				display: block;
+
+				@media (min-width: $break-tablet-small) {
+					height: 150px;
+	            }
+
+	            @media (min-width: $break-tablet-large) {
+					height: 170px;
+	            }
+
+	            @media (min-width: $break-screen-large) {
+					height: 200px;
+	            }	
+			}
+
+			&--image-desc{
+				margin: 0 auto;
+				display: inline-block;
+				width: auto;
+				width: 90%;
+				margin: 0 auto;
+				display: block;
+				text-align: left;
+				font-weight: 600;
+				color: red;
+				margin-top: .5rem;
+				// min-height: 40px;
+			}
+
+			&--image-loc{
+				margin: 0 auto;
+				display: inline-block;
+				width: auto;
+				width: 90%;
+				margin: 0 auto;
+				display: block;
+				text-align: left;
+				font-size: .8rem;
+				// min-height: 40px;
+			}
+
+			&--image-hr{
+				width: 90%;
+				margin-top: .3rem;
+				margin-bottom: .3rem;
+			}
+
+		}
+
+		&--no-content, 
+		&--load-more{
+			padding: 30px;
+
+		}
+	}
+
+	.nav-wrapper{
+		
+		&__nav{
+			background: #dee2e6ab;
+			/* opacity: .5; */
+			padding: 5px;
+
+			&--item{
+				padding: 10px;
+				cursor: pointer;
+			}
+
+			&--item.active{
+				padding: 10px;
+				font-weight: 600;
+			}
+		}
+		
+	}
+}

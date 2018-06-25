@@ -129,14 +129,20 @@ body {
     display: none!important;
 }
 
+.main-slider-new .title {
+    font-size: 1.5rem;
+}
+
 .slick-next {
     right: 0;
     z-index: 9;
+    top: 35%;
 }
 
 .slick-prev {
     left: 0;
     z-index: 9;
+    top: 35%;
 }
 
 .main-slider-new .overlay {
@@ -252,6 +258,10 @@ body {
 /* Desktop VIEW */
 @media (min-width: 1280px) {
 
+    .main-slider-new .title {
+        font-size: 2.5rem;
+    }
+
     nav.navbar,
     .main-slider-new .overlay {
         padding-left: 5rem; 
@@ -281,7 +291,6 @@ body {
         .main-slider-new:hover .slick-prev,
         .main-slider-new:hover .slick-next {
             display: inline-block!important;
-            top: 35%;
             opacity: .5;
         }
 
@@ -291,16 +300,16 @@ body {
         }
 
         .slick-prev:before {
-          color: #006d99;
-          font-size: 150px;
+          color: #fff;
+          font-size: 140px;
           content: '<';
           font-family: monospace;
           opacity: 1;
         }
 
         .slick-next:before {
-          color: #006d99;
-          font-size: 150px;
+          color: #fff;
+          font-size: 140px;
           content: '>';
           font-family: monospace;
           opacity: 1;

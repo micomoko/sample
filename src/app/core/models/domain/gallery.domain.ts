@@ -165,6 +165,51 @@ export class GalleryDomain {
      //*******************END ORTIGAS**************************//
 
 
+     //*******************START QUEZON CITY**************************//
+
+
+     {
+      projectID: 22,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-16.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/ARTISTS-PERSPECTIVE-OF-HIGH-PARK-TOWERS-ONE-AND-TWO-another-option-for-dusk-shot.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/ARTISTS-PERSPECTIVE-OF-THE-HIGH-PARK-AMENITY-ZONE-AND-RETAIL-ROW.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/ARTISTS-PERSPECTIVE-OF-THE-HIGH-PARK-LOUNGE-POOL.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/Retail-Eye-Courtyard.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/1BR-Living-Lowres.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/1BR-Bedroom-Lowres.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/2BR-Livingroom-Lowres.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/3BR-Living-Lowres.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/Vertis-SDP-FA.jpg",
+      ]
+    },
+
+
+    {
+      projectID: 23,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/Vertis-SDP-FA-1.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/LR-06_Update-Vertis-North-Rendering-View-from-Edsa-e1514885099721.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/04_Vertis-North-Aerial-focused-on-VibeHP_Towers_Night.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/02_Vibe-Tower-Façade-Semi-Aerial_Dusk.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/05_Vibe-HP-Eye-Level_Day.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/2017-06-27-Alveo-Vibe-Main-Lobby-View-at-Entry-LR.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/2017-06-20-Alveo-Vibe-Function-Room1A-LR.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/Alveo-Vibe-Gym-Render-01B-LR.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/LR-Pool-Area_Semi-Aerial_Day.png",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/12/LR-Amenity_Deck_Pool_Semi-Aerial_Dusk.png",
+
+      ]
+    },
+
+
+
+     //*******************END QUEZON CITY**************************//
+
+
+     //*******************START TAGAYTAY**************************//
+
+
     {
       projectID: 44,
       gallery: [
@@ -179,6 +224,83 @@ export class GalleryDomain {
         "https://www.alveoland.com.ph/wp-content/uploads/2017/08/kasaluntian-vidthumb.png",
       ]
     },
+
+
+
+    //*******************END TAGAYTAY**************************//
+
+
+    //*******************START LAGUNA**************************//
+
+    {
+      projectID: 51,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-18.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery3-min-18.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery4-min-17.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery5-min-15.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/aveia-vidthumb.png"
+      ]
+    },
+
+
+    {
+      projectID: 52,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery1-min-5.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-5.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery3-min-5.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery4-min-4.jpg"
+      ]
+    },
+
+
+    {
+      projectID: 54,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery1-min-13.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-12.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery3-min-12.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery4-min-11.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery5-min-11.jpg"
+      ]
+    },
+
+
+    {
+      projectID: 56,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/venare-nuvali3.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/venare-nuvali-2.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/venare-nuvali-1.jpg"
+      ]
+    },
+
+
+    {
+      projectID: 57,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/verdana-homes-1.jpg",
+      ]
+    },
+
+    //*******************END LAGUNA**************************//
+
+    //*******************START CAVITE**************************//
+
+
+    {
+      projectID: 61,
+      gallery: [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery1-min-24.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-23.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery3-min-22.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery4-min-21.jpg",
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery5-min-19.jpg"
+      ]
+    },
+
+    //*******************END CAVITE**************************//
   ];
 
 

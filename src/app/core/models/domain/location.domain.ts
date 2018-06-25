@@ -6,7 +6,7 @@ export class LocationDomain {
   private static readonly location = [
     {
       locationID: 1,
-      locationName: 'Makati'
+      locationName: 'Makati City'
     },
     {
       locationID: 2,
@@ -14,14 +14,22 @@ export class LocationDomain {
     },
     {
       locationID: 3,
-      locationName: 'Ortigas'
+      locationName: 'Pasig City'
     },
     {
       locationID: 4,
-      locationName: 'Southside'
+      locationName: 'Tagaytay'
     },
     {
       locationID: 5,
+      locationName: 'Laguna'
+    },
+    {
+      locationID: 6,
+      locationName: 'Cavite'
+    },
+    {
+      locationID: 7,
       locationName: 'Cebu'
     }
   ];
@@ -29,14 +37,14 @@ export class LocationDomain {
   /*
    * Get Location List.
    */
-  getLocation(){
+  getLocations(){
    return LocationDomain.location;
   }
 
   /*
    * Get Location Name by ID.
    */
-  getLocationName(locationID: number){
+  getLocationID(locationID: number){
    return LocationDomain.location.filter(loc => loc.locationID === locationID);
   }
 }

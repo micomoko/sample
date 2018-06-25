@@ -2,14 +2,46 @@ export class Projects {
 
   private readonly heroCarouselItems = [44,31,32,13,12];
 
+  private readonly heroByLocation = [
+    {
+      id: 1,
+      contents: [13,14,15]
+    },
+    {
+      id: 2,
+      contents: [23,22,21]
+    },
+    {
+      id: 3,
+      contents: [32,31]
+    },
+    {
+      id: 4,
+      contents: [44]
+    },
+    {
+      id: 5,
+      contents: [51, 53, 54]
+    },
+    {
+      id: 6,
+      contents: [61]
+    },
+    {
+      id: 7,
+      contents: []
+    }
+  ];
+
+
   private static readonly items = [
     //*******************START ORTIGAS**************************//
     {
       locationID: 3,
       projectID: 31, 
       projectName: 'AMETTA PLACE',
-      categoryID: '2,3',
-      category: 'Lot, Townhouse',
+      categoryID: 3,
+      category: 'Townhouse',
       location: 'Mercedes Avenue, Pasig City',
       locationName: 'Pasig City',
       googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.5730507214403!2d121.09556921483981!3d14.566390989824313!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7c6bb7fdfd5%3A0x2a8d6a9033769512!2sAmetta+Place!5e0!3m2!1sen!2sph!4v1526996925743",
@@ -41,7 +73,7 @@ export class Projects {
       locationID: 3,
       projectID: 32, 
       projectName: 'Portico',
-      categoryID: '1',
+      categoryID: 1,
       category: 'Condominium',
       location: 'Capt. Henry Javier Street, Oranbo, Pasig City',
       locationName: 'Pasig City',
@@ -52,6 +84,7 @@ export class Projects {
       description: "Portico features an urban courtyard experience like no other with its lush greenways, cobblestone pavements, and charming open spaces. Its choice location is conveniently within reach of prime business centers, including Ortigas, Quezon City, BGC, and Makati.",
       longDescription: "",
       landArea: "3.6 hectares | 8.9 acres",
+      video: "https://www.youtube.com/embed/oU5LjhT91_k?enablejsapi=1&autoplay=1",
       unitRange: [
         "Studio Unit: 30 sq.m. | 322 sq.ft.",
         "One-Bedroom Unit: 55-57 sq.m. | 592-613 sq.ft.",
@@ -67,7 +100,7 @@ export class Projects {
       locationID: 1,
       projectID: 11, 
       projectName: 'CALLISTO',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'West Gala Drive corner Theater Drive, Circuit Makati, Makati City',
       locationName: 'Makati City',
@@ -81,6 +114,7 @@ export class Projects {
         "Taking off at Makati's Lifestyle Playground—dynamic pursuits and an exhilarating array of leisure and entertainment concepts. Alveo Land extends extraordinary experiences within the city's foremost emerging district to contemporary homes celebrating every unique lifestyle—the starting point for energized investment. With the success of Solstice condominium in Makati Philippines, Alveo Land now presents its second pre-selling residential condominium in Circuit Makati with the Callisto towers. To date, Callisto Alveo price offers the best value for investment. <br><br>" +
         "As the latest Alveo Circuit project, Callisto Circuit Makati rises at the core of unique lifestyle and entertainment concepts that redefines effortless city living. Callisto towers Circuit Makati presents compact spaces in sync with your every move.",
       landArea: '2,461 sq.m. | 26,490 sq.ft.',
+      video: "https://www.youtube.com/embed/WWWnqVi_PwA?enablejsapi=1&autoplay=1",
       unitRange: [
         "Studio Unit: 28-32 sq.m. | 301-344 sq.ft.",
         "One-Bedroom Unit: 56-65 sq.m. | 603-700 sq.ft.",
@@ -93,7 +127,7 @@ export class Projects {
       locationID: 1,
       projectID: 12, 
       projectName: 'ALVEO FINANCIAL TOWER',
-      categoryID: [4],
+      categoryID: 4,
       category: 'Offices',
       location: '6794 Ayala Avenue, Makati City',
       locationName: 'Makati City',
@@ -114,7 +148,7 @@ export class Projects {
       locationID: 1,
       projectID: 13, 
       projectName: 'KROMA TOWER',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Legazpi Village, Makati City',
       locationName: 'Makati City',
@@ -135,7 +169,7 @@ export class Projects {
       locationID: 1,
       projectID: 14, 
       projectName: 'ESCALA SALCEDO',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'L.P. Leviste Street, Salcedo Village, Makati City',
       locationName: 'Makati City',
@@ -161,7 +195,7 @@ export class Projects {
       locationID: 1,
       projectID: 15, 
       projectName: 'SENTA',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Legazpi corner Rodriguez Streets, Legazpi Village, Makati City',
       locationName: 'Makati City',
@@ -183,7 +217,7 @@ export class Projects {
       locationID: 1,
       projectID: 16, 
       projectName: 'SOLSTICE',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Theater Drive corner Gallery Drive, Circuit Makati, Barangay Carmona, Makati City',
       locationName: 'Makati City',
@@ -208,7 +242,7 @@ export class Projects {
       locationID: 1,
       projectID: 17, 
       projectName: 'THE COLUMNS LEGAZPI VILLAGE',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Amorsolo Street corner Arnaiz Avenue, Legazpi Village, Makati City',
       locationName: 'Makati City',
@@ -238,7 +272,7 @@ export class Projects {
       locationID: 1,
       projectID: 18, 
       projectName: 'THE GENTRY CORPORATE PLAZA',
-      categoryID: [4],
+      categoryID: 4,
       category: 'Offices',
       location: 'Valero Street, Salcedo Village, Makati City',
       locationName: 'Makati City',
@@ -260,7 +294,7 @@ export class Projects {
       locationID: 1,
       projectID: 19, 
       projectName: 'THE GENTRY RESIDENCES',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Valero Street, Salcedo Village, Makati City',
       locationName: 'Makati City',
@@ -283,7 +317,7 @@ export class Projects {
       locationID: 1,
       projectID: 110, 
       projectName: 'THE LERATO',
-      categoryID: [1],
+      categoryID: 1,
       category: 'Condominium',
       location: 'Malugay Street, Makati City',
       locationName: 'Makati City',
@@ -306,7 +340,7 @@ export class Projects {
       locationID: 1,
       projectID: 111, 
       projectName: 'THE STILES ENTERPRISE PLAZA',
-      categoryID: [4],
+      categoryID: 4,
       category: 'Offices',
       location: 'Hippodromo Street corner Theater Drive, Circuit Makati, Makati City',
       locationName: 'Makati City',
@@ -335,21 +369,112 @@ export class Projects {
       ]
     },
 
-
-
-
-
     //*******************END MAKATI**************************//
+
+    //*******************START QUEZON CITY**************************//
+
+    {
+
+      locationID: 2,
+      projectID: 21, 
+      projectName: 'FERNDALE VILLAS',
+      categoryID: 3,
+      category: 'Townhouse',
+      location: 'Sampaguita Avenue, Quezon City',
+      locationName: 'Quezon City',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3859.529962721186!2d121.0618807!3d14.6825959!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b0b315fe6cf5%3A0x8c786ee98f9ac612!2sFerndale+Villas!5e0!3m2!1sen!2sph!4v1527223350805",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/MbHTABIX1-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/MG_3424-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/MG_3423.jpg',
+      description: "Ferndale Villas is the first residential development of Alveo in Quezon City. Anchored on a masterplan that takes the best elements of a sprawling campus-town enclave, it will carve a rare and modern mix of duplexes and triplexes in Quezon City where natural landscape, open spaces and canopied walks will be at the forefront of the living experience.",
+      longDescription: "",
+      landArea: '5 hectares | 50,000 sq.m.',
+      unitRange: [
+        "West Tower",
+        "Corner Unit: 100-180 sq.m. | 1,100-1,980 sq.ft.",
+        "Middle Unit: 79-101 sq.m. | 869-1,111 sq.ft.",
+        "Whole Floor: 1,381-1,499 sq.m | 15,191-16,489 sq.ft.",
+
+        "East Tower ",
+        "Corner Unit: 96-255 sq.m. | 1,056-2,805 sq.ft.",
+        "Middle Unit: 79-101 sq.m. | 869-1,111 sq.ft.",
+        "Whole Floor: 1,381-1,499 sq.m | 15,191-16,489 sq.ft.",
+
+        "Combined ",
+        "Corner Unit: 96-255 sq.m. | 1,056-2,805 sq.ft.",
+        "Middle Unit: 79-132 sq.m. | 869-1,452 sq.ft.",
+        "Whole Floor: 1,329-1,499 sq.m. | 14,619-16,489 sq.ft."
+      ]
+    },
+
+
+    {
+
+      locationID: 2,
+      projectID: 22, 
+      projectName: 'HIGH PARK',
+      categoryID: 1,
+      category: 'Condominium',
+      location: 'Vertis North, North Avenue cor. EDSA, North Triangle, Bgy. Bagong Pagasa, Quezon City',
+      locationName: 'Quezon City',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1930.06826529813!2d121.0392058!3d14.6481902!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b703c075cc5d%3A0xa0dec60469c53c96!2sHigh+Park+Vertis!5e0!3m2!1sen!2sph!4v1527226183435",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/HP-LOGO-WEB.png',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header2-min-15-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/HP-TOWER-WEB.jpg',
+      description: "High Park offers an inspiring two-tower development as part of the Vertis North masterplan, the latest mixed-use city center of Quezon City. Located in the emerging enterprise capital of the North, High Park is an ideal location with prime access to business districts, medical and educational institutions, and major thoroughfares in the metro. ",
+      longDescription:
+        "High Park offers an inspiring two-tower development as part of the Vertis North masterplan, the latest mixed-use city center of Quezon City. Located in the emerging enterprise capital of the North, High Park is an ideal location with prime access to business districts, medical and educational institutions, and major thoroughfares in the metro. <br><br>" + 
+        "A Vertis North condo for sale, Alveo High Park Tower 2 combines thriving open spaces with minimalist and contemporary architecture at the heart of Quezon City. High Park is a Vertis North condo pre-selling project of Alveo. As Alveo Land's first residential development in this lifestyle destination, it is one of the first Vertis North condo for sale.  <br><br>" + 
+        "High Park Tower Two is a prime Vertis North pre-selling condo project in Quezon City.",
+      landArea: '',
+      unitRange: [
+        "Studio Unit: 32 sq.m. | 345 sq.ft. ",
+        "One-Bedroom Unit: 61 sq.m. | 657 sq.ft. ",
+        "Two-Bedroom Unit: 88 sq.m. | 947 sq.ft. ",
+        "Three-Bedroom Unit: 123 sq.m. | 1,324 sq.ft. "
+      ]
+    },
+
+
+    {
+
+      locationID: 2,
+      projectID: 23, 
+      projectName: 'OREAN PLACE',
+      categoryID: 1,
+      category: 'Condominium',
+      location: 'Vertis North, North Avenue cor. EDSA, North Triangle, Bgy. Bagong Pagasa, Quezon City',
+      locationName: 'Quezon City',
+      googleMap: "",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2018/01/071217-OREAN-Tower-1_Full-color-Logo_FA.png',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2018/01/vibe-tower-facade-1.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2018/01/05_Vibe-HP-Eye-Level_Day_web.png',
+      description: "Glowing with the easy calm of every day, Alveo Land reveals a stunning two-tower, residential development in the heart of QC. Matched with insightful amenities and shared spaces, Orean Place lights the way for laidback city living.",
+      longDescription: "",
+      landArea: '7,828 sq.m. | 84,262 sq.ft.',
+      unitRange: [
+        "Studio Unit: 32 sq.m. | 345 sq.ft.",
+        "One-Bedroom Unit: 61 sq.m. | 657 sq.ft.",
+        "Two-Bedroom Unit: 88 sq.m. | 947 sq.ft.",
+        "Three-Bedroom Unit: 123 sq.m. | 1,324 sq.ft."
+      ]
+    },
+
+
+    //*******************END QUEZON CITY**************************//
+
+    //*******************START TAGAYTAY**************************//
     {
       locationID: 4,
       projectID: 44, 
       projectName: 'KASA LUNTIAN',
-      categoryID: '1',
+      categoryID: 1,
       category: 'Condominium',
       location: 'Calamba St, San Jose, Tagaytay',
       locationName: 'Tagaytay',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3869.201696199437!2d120.96659131483473!3d14.124232890107274!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd79ef4024f1b5%3A0x145ae6a0dc0fd8cc!2sKasa+Luntian!5e0!3m2!1sen!2sph!4v1527231461117",
       logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/JBHWXCBQEb0BYHBS0-min.jpg',
-      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/kasaluntian-2.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/kasaluntian-3.jpg',
       imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/HFIM3019.jpg',
       description: "Kasa Luntian is Alveo Land's pre-selling condo in Tagaytay. It is also the first offering Ayala Land pre-selling condo in the city. Rediscover the warmth of home embraced by Tagaytay’s lush landscape on the quiet side of the ridge. Kasa Luntian is a a Tagaytay condo offering a living experience attuned to life’s natural pace. Leisure residences imbued with a cool atmosphere for vibrant outdoor pursuits and a sense of calm in the comfort of indoors—naturally at home. ",
       longDescription: 
@@ -364,16 +489,218 @@ export class Projects {
         "Two-Bedroom Unit: 81-89 sq.m. | 872-958 sq.ft.",
         "Three-Bedroom: 119-157 sq.m. | 1,281-1,690 sq.ft."
       ]
-    }
+    },
+
+
+    //*******************END TAGAYTAY**************************//
+
+
+    //*******************START LAGUNA**************************//
+
+    {
+      locationID: 5,
+      projectID: 51, 
+      projectName: 'AVEIA',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Brgy. Malamig, Biñan City, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7733.571331181414!2d121.0435604!3d14.2657184!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDE1JzU3LjkiTiAxMjHCsDAyJzUwLjgiRQ!5e0!3m2!1sen!2sph!4v1527231305955",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/189-core-aveialogo-03-03-16-website-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery3-min-18.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/Clubhouse_Drop_Off.jpg',
+      description: "Envisioned to be a quaint, nurturing pocket community, Aveia offers a convenient and complete suburban lifestyle in the South.",
+      longDescription: "",
+      landArea: '22.08 hectares | 54.56 acres',
+      unitRange: [
+
+      ]
+    },
+
+    {
+      locationID: 5,
+      projectID: 52, 
+      projectName: 'LUMIRA NUVALI',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Brgys. Canlubang and Majada, Calamba City, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3867.2813627915943!2d121.0559487!3d14.2368021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d3d9e7d612f%3A0xe86e3176d890900d!2sNuvali+Boulevard%2C+Santa+Rosa%2C+Laguna!5e0!3m2!1sen!2sph!4v1527231966593",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/WebFQIbOJAbN1-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/lumira-perspective-clubhouse.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery2-min-5.jpg',
+      description: "Lumira is Alveo Land's fourth horizontal development in NUVALI. It is a 45-hectare development composed of 11 neighborhood clusters located in close proximity to Alveo Land's Venare, Treveia and Mirala in the NUVALI South district.",
+      longDescription: "",
+      landArea: '45.1 hectares | 111.44 acres',
+      unitRange: [
+
+      ]
+    },
+
+
+
+    {
+      locationID: 5,
+      projectID: 53, 
+      projectName: 'MIRALA NUVALI',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Brgys. Canlubang and Majada, Calamba City, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.2846013641765!2d121.05605801483593!3d14.236612990035141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d3d83da264f%3A0x3a8e4025b00e304f!2sNuvali!5e0!3m2!1sen!2sph!4v1527310223772",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/XCBFHBCEGB0NZHBQ0-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header1-min-29-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/NUV_Mirala_Perspective_102312-Streetscape-lowres.jpg',
+      description: "Mirala is Alveo Land's third residential community within NUVALI - the country's first and largest thriving eco-city development. Here, the balance between a lifestyle of responsibility and sustainability thrives in an environment of diverse spaces, activities, and services.",
+      longDescription: "",
+      landArea: '29.5 hectares | 72.90 acres',
+      unitRange: [
+
+      ]
+    },
+
+
+    {
+      locationID: 5,
+      projectID: 54, 
+      projectName: 'MONDIA NUVALI',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Brgys. Canlubang and Majada, Calamba City, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3867.2813627915943!2d121.0559487!3d14.2368021!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d3d9e7d612f%3A0xe86e3176d890900d!2sNuvali+Boulevard%2C+Santa+Rosa%2C+Laguna!5e0!3m2!1sen!2sph!4v1527311295814",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/mondialogo.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header1-min-24-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery5-min-11.jpg',
+      description: "Mondia is Alveo Land's fifth horizontal development in NUVALI. It is envisioned to be a 40-hectare residential subdivision offering a distinct natural park playground environment that promotes outdoor family recreation.",
+      longDescription: "",
+      landArea: '39.61 hectares | 97.88 acres',
+      unitRange: [
+
+      ]
+    },
+
+
+    {
+      locationID: 5,
+      projectID: 55, 
+      projectName: 'TREVEIA NUVALI',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Brgys. Canlubang and Majada, Calamba City, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3867.7949416028378!2d121.06396761483553!3d14.20678189005425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7cb85745a953%3A0xa135943e0cecbc8c!2sTreveia+Nuvali!5e0!3m2!1sen!2sph!4v1527925292535",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/PbIAKBFSDb0YQHbH0-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/NUV_Treveia-36-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/NUV_Treveia-8.jpg',
+      description: "Alveo Land sets its mark in NUVALI with Treveia - a residential haven that introduces a lifestyle that warmly nurtures close family and community ties. It offers the modern conveniences of urban life in a healthy, upscale, and eco-friendly environment, while still being able to live close to family and friends. ",
+      longDescription: "",
+      landArea: '',
+      unitRange: [
+
+      ]
+    },
+
+
+    {
+      locationID: 5,
+      projectID: 56, 
+      projectName: 'VENARE NUVALI',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'NUVALI South',
+      locationName: 'Laguna',
+      googleMap: "",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/KHbMD0bFSIBGZbIU1-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/venare-nuvali-1.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header2-min-6.jpg',
+      description: "Kick off an active lifestyle at Venare, a sustainable community fusing suburban tranquility with multi-active lifestyle choices in the urban and eco-friendly setting of NUVALI.",
+      longDescription: "",
+      landArea: '',
+      unitRange: [
+
+      ]
+    },
+
+
+    {
+      locationID: 5,
+      projectID: 57, 
+      projectName: 'VERDANA HOMES MAMPLASAN',
+      categoryID: 2,
+      category: 'Lot',
+      location: 'Binan, Laguna',
+      locationName: 'Laguna',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3866.3650485375138!2d121.0613093148366!3d14.290209990000719!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397d7939f561191%3A0x939a0654fdd1184e!2sVerdana+Homes+Mamplasan!5e0!3m2!1sen!2sph!4v1527926330067",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/NbJNLbBCHB0LFbhJ0-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/verdana-homes-2.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header2-min-7.jpg',
+      description: "Verdana Homes Mamplasan offers houses and lots that are perfect for those who want to combine the warmth and traditions of suburban living with modern-day facilities and amenities.",
+      longDescription: "",
+      landArea: '',
+      unitRange: [
+
+      ]
+    },
+
+    //*******************END LAGUNA**************************//
+
+
+    //*******************START CAVITE**************************//
+
+    {
+      locationID: 6,
+      projectID: 61, 
+      projectName: 'WESTBOROUGH',
+      categoryID: 5,
+      category: 'Commercial Lot',
+      location: 'Barangay Inchican, Silang, Cavite',
+      locationName: 'Cavite',
+      googleMap: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15468.1080980409!2d121.0471267!3d14.251646!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd7d1325e5bf0f%3A0xc9e5e516f746c03d!2sSouth+Forbes!5e0!3m2!1sen!2sph!4v1527927087707",
+      logo: 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/165-westboroughalveo-website-logo20150327-576x410-min.jpg',
+      imageLarge : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/header1-min-3-1-min.jpg',
+      imageMobile : 'https://www.alveoland.com.ph/wp-content/uploads/2017/08/gallery4-min-21.jpg',
+      description: "A joint venture of Alveo Land and Cathay Land, Westborough is envisioned to become the preferred destination for urban lifestyle essentials in the South. A prime spot for shopping, dining, business, and relaxation, it's a breath of fresh air with up to 40% of the land area dedicated to open spaces. Westborough will capture Southern living at its finest: breezy and leisurely, yet distinctly modern and dynamic at the same time.",
+      longDescription:
+        "A joint venture of Alveo Land and Cathay Land, Westborough is envisioned to become the preferred destination for urban lifestyle essentials in the South. A prime spot for shopping, dining, business, and relaxation, it's a breath of fresh air with up to 40% of the land area dedicated to open spaces. Westborough will capture Southern living at its finest: breezy and leisurely, yet distinctly modern and dynamic at the same time. <br><br>" +
+        "For those looking at a vacant lot for sale in Bacoor Cavite, lot for sale in Dasmarinas Cavite, lot only for sale in business for sale in Dasmarinas Cavite, or commercial lot for sale in Aguinaldo Highway Cavite, Westborough is a good option to consider. As there may be other commercial house and lot for sale in Cavite, commercial building for sale in Cavite, or commercial house and lot for sale Dasmarinas Cavite, Westborough provides a choice location for doing business in the South. <br><br>" +
+        "From your village flower shop to a full - scale supermarket; from your local café to international cuisines ; from your family dentist to your fitness center, Westborough is designed to be an extension of the Southerner ’s home and community. It’s a design worthy to be its crown jewel, with its masterplan and modern Asian - Mediterranean architecture making it highly inviting and attractive. As a retail complex, it’s a breath of fresh air – literally. <br><br>" +
+        "With up to 40 % of the land area dedicated to open spaces, Westborough captures Southern living at its finest : breezy, al fresco, leisurely, and yet distinctly modern and dynamic all at once. <br><br>" +
+        "Westborough ’s retail options also offer a selection of boutiques curated for the tasteful modern individual. Dining is often open-air, with an offering of unique, artisanal restaurants among well-known franchises. Institutions for business and commerce are on hand along with community services and public features, like a bike route and jogging path. <br><br>" +
+        "It’s an integrated and seamless environment. Establishments open out to contiguous parks and outdoor pathways. Here, in Westborough, the South has a sense of freedom and space in its experience of modern convenience.",
+      landArea: '',
+      unitRange: [
+
+      ]
+    },
+
+
+    //*******************END LAGUNA**************************//
+
+
+
+
+
+
+    
   ];
 
 
 
-  getHeroCarousel(){
+  getHeroCarousel(locationID: number){
 
     let items = [];
 
-    for(let id of this.heroCarouselItems){
+    let carousel = [];
+
+    if(locationID){
+      let carouselT = this.heroByLocation.filter(item => item.id === locationID);
+      carousel = carouselT && carouselT[0] && carouselT[0].contents ? carouselT[0].contents : [];
+    }else{
+      carousel = this.heroCarouselItems
+    }
+
+    for(let id of carousel){
       let temp = Projects.items.filter(item => item.projectID === id);
 
       if(temp && temp.length > 0){
@@ -391,5 +718,39 @@ export class Projects {
 
     return response && response.length > 0 ? response[0] : null;
 
-  }  
+  } 
+
+
+  getPropertiesByCatID(categoryID: number){
+
+
+    var response = Projects.items.filter(item => item.categoryID === categoryID);
+
+    return response && response.length > 0 ? response : [];
+
+  }
+
+  getPropertiesByCatIDAndLocID(categoryID: number, locID: number){
+
+
+    var response = Projects.items.filter(item => item.categoryID === categoryID && item.locationID === locID);
+
+    return response && response.length > 0 ? response : [];
+
+  }
+
+  getPropertyCount(categoryID: number, locID: number){
+
+    var response = [];
+
+    if(locID){
+      response = Projects.items.filter(item => item.categoryID === categoryID && item.locationID === locID);
+    }else{
+      response = Projects.items.filter(item => item.categoryID === categoryID);
+    }
+
+
+    return response.length;
+
+  }
 }

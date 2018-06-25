@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MainCarouselComponent } from './templates/carousel/main-carousel/main-carousel.component';
 import { SyncCarouselComponent } from './templates/carousel/sync-carousel/sync-carousel.component';
@@ -15,7 +16,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule      
   ],
   declarations: [
     MainCarouselComponent,

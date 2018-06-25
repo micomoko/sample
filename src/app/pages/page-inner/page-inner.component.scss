@@ -57,8 +57,13 @@ $break-screen-large:  1280px;
 
 			.overlay__logo{
 				// display: none;
-				max-width: 200px;
+				max-width: 100px;
 				padding-bottom: 10px;
+
+
+				@media (min-width: $break-tablet-large) {
+					max-width: 200px;
+				}
 			}
 
 
@@ -107,10 +112,12 @@ $break-screen-large:  1280px;
 
 		@media (min-width: $break-tablet-large) {
 			padding: 20px 2rem;
+			min-height: 450px;
 		}
 
 		@media (min-width: $break-screen-large) {
 			padding: 20px 5rem;
+			min-height: 550px;
 		}
 
 
@@ -118,6 +125,8 @@ $break-screen-large:  1280px;
 		.details__description,
 		.details__land-area,
 		.details__unit-range,
+		.details__lot-range,
+		.details__plan-type,
 		.details__price-range
 		.details__amenities,
 		.details__gallery,
@@ -130,7 +139,48 @@ $break-screen-large:  1280px;
 			padding: 20px 0;
 		}
 
+
+		.details__description{
+			text-align: justify;
+		}
+
+
+		.details__video{
+			position: fixed;
+			bottom: 2%;
+			z-index: 99999;
+			width: 300px;
+			right: 10px;
+			background-color: #00000057;
+
+			@media only screen and (min-width: $break-tablet-large){
+				width: 400px;
+			}
+
+			.close{
+				width: 100%;
+				text-align: right;
+				margin-right: 10px;
+			}
+
+			&--video-frame{
+				width: 95%;
+				height: auto;
+				margin: 0 auto;
+				display: block;
+				padding-bottom: 10px;
+
+				@media only screen and (min-width: $break-tablet-large){
+					height: 250px;
+				}
+			}
+		}
+
 		.details__location {
+			@media only screen and (min-width: $break-tablet-large){
+				float: right;
+				margin-left: 20px;
+			}
 			&--map-frame{
 				border: 0;
 			    width: 290px;
@@ -195,16 +245,19 @@ $break-screen-large:  1280px;
 			text-align: center;
 			.details__constructionUpdates--images{
 				max-width: 300px;
+				max-height: 200px;
 				display: inline-block;
 				margin: 0 auto;
 				cursor: zoom-in;
 
 				@media (min-width: $break-tablet-large) {
 					max-width: 400px;
+					max-height: 230px;
 				}
 
 				@media (min-width: $break-screen-large) {
 					max-width: 500px;
+					max-height: 300px;
 				}
 			}
 		}

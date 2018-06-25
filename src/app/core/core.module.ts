@@ -3,12 +3,15 @@ import { CommonModule } from '@angular/common';
 import { NavigationService } from './services/navigation.service';
 import { CarouselService } from './services/carousel.service';
 import { PageInnerService } from './services/page-inner.service';
+import { DomainService } from './services/domain.service';
 
 import { AmenitiesDomain } from './models/domain/amenities.domain';
 import { LocationDomain } from './models/domain/location.domain';
 import { CategoryDomain } from './models/domain/category.domain';
 import { GalleryDomain } from './models/domain/gallery.domain';
 import { FacadeDomain } from './models/domain/facade.domain';
+import { PlanTypeDomain } from './models/domain/plan-type.domain';
+import { LotRangeDomain } from './models/domain/lot-range.domain';
 import { ConstructionDomain } from './models/domain/construction.domain';
 import { UnitPlanDomain } from './models/domain/unit-plan.domain';
 import { Projects } from './models/projects';
@@ -31,7 +34,10 @@ import { Projects } from './models/projects';
         GalleryDomain,
         FacadeDomain,
         ConstructionDomain,
-        UnitPlanDomain
+        UnitPlanDomain,
+        PlanTypeDomain,
+        LotRangeDomain,
+        DomainService
 
     ],
 })

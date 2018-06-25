@@ -6,23 +6,28 @@ export class CategoryDomain {
   private static readonly category = [
     {
       categoryID: 1,
-      categoryName: 'Condominiums'
+      categoryName: 'Condominiums',
+      id: 'category1'
     },
     {
       categoryID: 2,
-      categoryName: 'Lots'
+      categoryName: 'Lots',
+      id: 'category2'
     },
     {
       categoryID: 3,
-      categoryName: 'Townhouses'
+      categoryName: 'Townhouses',
+      id: 'category3'
     },
     {
       categoryID: 4,
-      categoryName: 'Offices'
+      categoryName: 'Offices',
+      id: 'category4'
     },
     {
       categoryID: 5,
-      categoryName: 'Commercial Lots'
+      categoryName: 'Commercial Lots',
+      id: 'category5'
     }
   ];
 

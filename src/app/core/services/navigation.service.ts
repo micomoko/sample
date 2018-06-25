@@ -14,11 +14,11 @@ export class NavigationService {
 	}
 
 	private getNavigationItems(){
-		let locList = this.locationDomain.getLocation();
+		let locList = this.locationDomain.getLocations();
 
 		if(locList && locList.length > 5){
-			this.locations = locList.splice(0, 5);
-			this.otherLocations = locList.splice(5, 5);
+			this.locations = locList.splice(0, 6);
+			this.otherLocations = locList;
 		}else{
 			this.locations = locList;
 			this.otherLocations = [];

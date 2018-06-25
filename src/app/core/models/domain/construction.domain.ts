@@ -88,13 +88,60 @@ export class ConstructionDomain {
 
      //*******************END ORTIGAS**************************//
 
+     //*******************START QUEZON CITY**************************//
+
+     {
+      projectID: 22,
+      construction : [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/HP-CU-DEC-2017.png"
+      ],
+    },
+
+
+     //*******************END QUEZON CITY**************************//
+
+
+     //*******************START TAGAYTAY**************************//
+
 
     {
       projectID: 44,
       construction : [
         "https://www.alveoland.com.ph/wp-content/uploads/2017/08/construction1-min-2.png"
       ],
-    }
+    },
+
+
+    //*******************END TAGAYTAY**************************//
+
+    //*******************START LAGUNA**************************//
+
+    {
+      projectID: 51,
+      construction : [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/March-2018-1.jpg"
+      ],
+    },
+
+
+    {
+      projectID: 52,
+      construction : [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/Lumira-October-2017.png"
+      ],
+    },
+
+    {
+      projectID: 54,
+      construction : [
+        "https://www.alveoland.com.ph/wp-content/uploads/2017/08/Mondia-March-2018.png"
+      ],
+    },
+
+
+
+
+    //*******************END LAGUNA**************************//
   ];
 
 

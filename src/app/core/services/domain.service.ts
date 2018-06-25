@@ -12,9 +12,13 @@ import {PlanTypeDomain} from  '../models/domain/plan-type.domain';
 import {ConstructionDomain} from  '../models/domain/construction.domain';
 
 
+import {LocationDomain} from  '../models/domain/location.domain';
+import {CategoryDomain} from  '../models/domain/category.domain';
+
+
 
 @Injectable()
-export class PageInnerService {
+export class DomainService {
 
 	locations: any = [];
 	otherLocations:  any = [];
@@ -22,49 +26,33 @@ export class PageInnerService {
 	constructor(private projects: Projects, private amenitiesDomain: AmenitiesDomain,
 		private facadeDomain: FacadeDomain, private galleryDomain: GalleryDomain,
 		private constructionDomain: ConstructionDomain, private unitPlanDomain: UnitPlanDomain,
-		private planTypeDomain: PlanTypeDomain, private lotRangeDomain: LotRangeDomain){
+		private planTypeDomain: PlanTypeDomain, private lotRangeDomain: LotRangeDomain,
+		private locationDomain: LocationDomain, private categoryDomain: CategoryDomain){
 		
 	}
 
-	getProjectDetails(projectID: number){
-
-		return this.projects.getProjectDetails(projectID);
+	getLocations(){
+		return this.locationDomain.getLocations();
 	}
 
-	getAmenities(projectID: number){
-		return this.amenitiesDomain.getAmenityById(projectID);
+	getCategories(){
+		return this.categoryDomain.getCategories();
 	}
 
+	getPropertiesByCatID(categoryID: number){
 
-	getGallery(projectID: number){
-		return this.galleryDomain.getGalleryById(projectID);
-	}	
-
-	getFacade(projectID: number){
-		return this.facadeDomain.getFacadeById(projectID);
-	}
-
-	getFloorPlan(projectID: number){
+		return this.projects.getPropertiesByCatID(categoryID);
 
 	}
 
-	getUnitPlan(projectID: number){
-		return this.unitPlanDomain.getUnitPlanById(projectID);
+
+	getPropertiesByCatIDAndLocID(categoryID: number, locationID: number){
+		return this.projects.getPropertiesByCatIDAndLocID(categoryID, locationID);
 	}
 
 
-	getConstructionUpdates(projectID: number){
-		return this.constructionDomain.getConstructionById(projectID);
-	}
-
-
-	getLotRange(projectID: number){
-		return this.lotRangeDomain.getLotRangeByID(projectID);
-	}
-
-
-	getPlanType(projectID: number){
-		return this.planTypeDomain.getPlanTypeByID(projectID);
+	getPropertyCount(categoryID: number, locationID: number){
+		return this.projects.getPropertyCount(categoryID, locationID);
 	}
 
 }
